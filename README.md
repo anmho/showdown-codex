@@ -2,7 +2,7 @@
 
 Chrome extension (MV3) that plays [Pokemon Showdown](https://play.pokemonshowdown.com)
 autonomously using local **codex app-server** inference
-(`gpt-5.3-codex-spark`, reasoning effort `low`).
+(`gpt-5.4-codex`, reasoning effort `low` or `medium`).
 
 ## How it works
 
@@ -48,5 +48,5 @@ legal action so the battle timer never runs out.
 Notes:
 - Chat (including the end-of-game "gg") only goes through when you're logged in
   with a name — Showdown blocks guest chat.
-- GPT-5.3-Codex-Spark has its own rate-limit pool, separate from the general
+- GPT-5.4-Codex has its own rate-limit pool, separate from the general
   codex limit, so the bot keeps working even when regular codex usage is maxed.

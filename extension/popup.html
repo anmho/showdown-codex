@@ -46,7 +46,24 @@
   </head>
   <body>
     <h1>Showdown Codex Autopilot</h1>
-    <div class="row"><span><span id="dot" class="dot bad"></span><span id="conn">…</span></span><span class="muted" id="model"></span></div>
+    <div class="row"><span><span id="dot" class="dot bad"></span><span id="conn">…</span></span></div>
+    <div class="row">
+      <span class="muted">Model</span>
+      <select id="model-select" style="background: #22252c; color: #e8e8ea; border: 1px solid #44474f; border-radius: 4px; padding: 2px 4px; font-size: 11px;">
+        <option value="gpt-5.4-codex">gpt-5.4-codex</option>
+        <option value="gpt-5.3-codex">gpt-5.3-codex</option>
+        <option value="gpt-5.4-codex-spark">gpt-5.4-codex-spark</option>
+        <option value="gpt-5.3-codex-spark">gpt-5.3-codex-spark</option>
+      </select>
+    </div>
+    <div class="row">
+      <span class="muted">Reasoning Effort</span>
+      <select id="effort-select" style="background: #22252c; color: #e8e8ea; border: 1px solid #44474f; border-radius: 4px; padding: 2px 4px; font-size: 11px;">
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+      </select>
+    </div>
     <div class="row"><label><input type="checkbox" id="enabled" /> Autopilot enabled</label></div>
     <div class="row"><label><input type="checkbox" id="chat" /> Allow chat</label></div>
     <div class="row"><span class="muted">Decisions</span><span id="decisions">0</span></div>

@@ -21,7 +21,8 @@ function block(parent, label, text) {
 function render(s) {
   $('dot').className = 'dot ' + (s.connected ? 'ok' : 'bad');
   $('conn').textContent = s.connected ? 'codex app-server connected' : 'not connected';
-  $('model').textContent = s.cfg.model.replace('gpt-', '') + ' / ' + s.cfg.effort;
+  $('model-select').value = s.cfg.model;
+  $('effort-select').value = s.cfg.effort;
   $('enabled').checked = !!s.cfg.enabled;
   $('chat').checked = !!s.cfg.chat;
   $('decisions').textContent = s.usage.decisions;
@@ -107,6 +108,8 @@ function refresh() {
 
 $('enabled').addEventListener('change', (e) => chrome.storage.local.set({ enabled: e.target.checked }));
 $('chat').addEventListener('change', (e) => chrome.storage.local.set({ chat: e.target.checked }));
+$('model-select').addEventListener('change', (e) => chrome.storage.local.set({ model: e.target.value }));
+$('effort-select').addEventListener('change', (e) => chrome.storage.local.set({ effort: e.target.value }));
 $('reset-stats').addEventListener('click', (e) => {
   e.preventDefault();
   if (confirm('Are you sure you want to reset winrate stats?')) {

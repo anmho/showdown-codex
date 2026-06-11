@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Showdown Codex Autopilot",
   "version": "0.1.0",
-  "description": "Plays Pokemon Showdown autonomously using codex app-server inference (gpt-5.3-codex-spark, low effort).",
+  "description": "Plays Pokemon Showdown autonomously using codex app-server inference (gpt-5.4-codex, low/medium effort).",
   "permissions": ["storage"],
   "background": { "service_worker": "background.js" },
   "action": {

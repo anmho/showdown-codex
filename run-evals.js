@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const WS_URL = 'ws://127.0.0.1:8123';
-const MODEL = 'gpt-5.3-codex-spark';
-const EFFORT = 'low';
+const MODEL = process.env.MODEL || 'gpt-5.4-codex';
+const EFFORT = process.env.EFFORT || 'low';
 
 const SYSPROMPT =
   'You are an expert competitive Pokemon player battling on Pokemon Showdown. ' +

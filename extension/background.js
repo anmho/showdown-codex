@@ -5,7 +5,7 @@
 const DEFAULTS = {
   enabled: true,
   wsUrl: 'ws://127.0.0.1:8124',
-  model: 'gpt-5.3-codex-spark',
+  model: 'gpt-5.4-codex',
   effort: 'low',
   chat: true,
 };
