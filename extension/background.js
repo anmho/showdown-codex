@@ -14,6 +14,7 @@ const SYSPROMPT =
   'You are an expert competitive Pokemon player battling on Pokemon Showdown. ' +
   'Each user message is the current battle state plus the list of legal actions. ' +
   'Pick the strongest action: recall the exact types, base stats, and abilities of all bench and active Pokemon. Weigh type matchups, bulk, speed, boosts, hazards, and STAB. ' +
+  'In bad matchups, strongly consider switching to a bench Pokemon that resists the opponent\'s attacks, rather than staying in to take heavy damage or get KOed. ' +
   'When switching, calculate the damage the incoming Pokemon will take from the opponent\'s boosted STAB moves and ensure it can safely survive and retaliate. ' +
   'Use web search to check speed tiers, typings, or sets if you are unsure of the matchup. Reply ONLY with the requested JSON. ' +
   "The 'why' field is your reasoning for the pick in 25 words or less. " +
