@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Switch choice against +6 Def Registeel (Body Press threat)",
+    "format": "gen9randombattle",
+    "state": "Turn 8\nBENCH: 2 Salamence 100%, 3 Brute Bonnet 100%, 4 Uxie 100%, 5 Scream Tail 100%, 6 Leavanny 100%\nYour pokemon fainted/must switch. Choose a switch.\nFOE: Registeel 80% [+6def]\nFOE BENCH (revealed): Gallade 100%",
+    "legal": ["switch 2", "switch 3", "switch 4", "switch 5", "switch 6"],
+    "expected": ["switch 2", "switch 5", "switch 4"],
+    "unexpected": ["switch 3"]
+  },
+  {
+    "name": "Switch choice against +2 Atk Toxicroak (Psychic check preferred)",
+    "format": "gen9randombattle",
+    "state": "Turn 2\nBENCH: 2 Scyther 100%, 3 Swampert 100%, 4 Decidueye 100%, 5 Cresselia 100%, 6 Chi-Yu 100%\nYour pokemon fainted/must switch. Choose a switch.\nFOE: Toxicroak 100% [+2atk]",
+    "legal": ["switch 2", "switch 3", "switch 4", "switch 5", "switch 6"],
+    "expected": ["switch 5"],
+    "unexpected": ["switch 6", "switch 3"]
+  },
+  {
+    "name": "Immediate KO choice with quad-effective Earthquake vs Heatran",
+    "format": "gen9randombattle",
+    "state": "Turn 1\nYOU: Swampert 100% item:leftovers abil:damp\nMOVES: 1 Earthquake 16pp, 2 Waterfall 16pp, 3 Ice Beam 16pp, 4 Stealth Rock 15pp\nBENCH: 2 Salamence 100%, 3 Brute Bonnet 100%, 4 Uxie 100%, 5 Scream Tail 100%, 6 Leavanny 100%\nFOE: Heatran 100%",
+    "legal": ["move 1", "move 2", "move 3", "move 4", "switch 2", "switch 3", "switch 4", "switch 5", "switch 6"],
+    "expected": ["move 1"],
+    "unexpected": ["move 3", "move 4", "switch 3"]
+  },
+  {
+    "name": "Priority / Switch decision with outspeed OHKO threat (Baxcalibur vs Dragonite)",
+    "format": "gen9randombattle",
+    "state": "Turn 1\nYOU: Dragonite 100% item:heavyboots abil:multiscale\nMOVES: 1 Outrage 16pp, 2 Extreme Speed 8pp, 3 Dragon Dance 8pp, 4 Fire Punch 16pp\nBENCH: 2 Swampert 100%, 3 Bronzong 100%, 4 Rotom-Wash 100%\nFOE: Baxcalibur 100%\nBaxcalibur is faster and will OHKO with Icicle Spear/Glaive Rush.",
+    "legal": ["move 1", "move 2", "move 3", "move 4", "switch 2", "switch 3", "switch 4"],
+    "expected": ["move 2", "switch 2", "switch 3", "switch 4"],
+    "unexpected": ["move 3", "move 1"]
+  },
+  {
+    "name": "Switch out quad-weak active Pokemon (Tyranitar vs Great Tusk)",
+    "format": "gen9randombattle",
+    "state": "Turn 1\nYOU: Tyranitar 100% item:leftovers abil:sandstream\nMOVES: 1 Stone Edge 8pp, 2 Crunch 24pp, 3 Earthquake 16pp, 4 Dragon Dance 8pp\nBENCH: 2 Talonflame 100%, 3 Gholdengo 100%\nFOE: Great Tusk 100%\nGreat Tusk is Ground/Fighting, outspeeds Tyranitar, and has quad-effective Fighting STAB Close Combat.",
+    "legal": ["move 1", "move 2", "move 3", "move 4", "switch 2", "switch 3"],
+    "expected": ["switch 2", "switch 3"],
+    "unexpected": ["move 1", "move 2", "move 3", "move 4"]
+  },
+  {
+    "name": "Defensive Terastallization choice to survive OHKO (Dragonite vs Baxcalibur)",
+    "format": "gen9randombattle",
+    "state": "Turn 1\nYOU: Dragonite 100% item:heavyboots abil:multiscale\nMOVES: 1 Outrage 16pp, 2 Extreme Speed 8pp, 3 Dragon Dance 8pp, 4 Fire Punch 16pp\nCan terastallize to: Steel\nBENCH: None\nFOE: Baxcalibur 100%\nBaxcalibur is faster and will OHKO with quad-effective Ice-type Icicle Spear.",
+    "legal": ["move 1", "move 2", "move 3", "move 4", "move 1 terastallize", "move 2 terastallize", "move 3 terastallize", "move 4 terastallize"],
+    "expected": ["move 4 terastallize", "move 1 terastallize", "move 2 terastallize", "move 3 terastallize"],
+    "unexpected": ["move 1", "move 2", "move 3", "move 4"]
+  }
+]
