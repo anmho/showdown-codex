@@ -10,7 +10,7 @@ const SYSPROMPT =
   'Each user message is the current battle state plus the list of legal actions. ' +
   'Pick the strongest action: recall the exact types, base stats, and abilities of all bench and active Pokemon. Weigh type matchups, bulk, speed, boosts, hazards, and STAB. ' +
   'When switching, calculate the damage the incoming Pokemon will take from the opponent\'s boosted STAB moves and ensure it can safely survive and retaliate. ' +
-  'Never use tools. Reply ONLY with the requested JSON. ' +
+  'Use web search to check speed tiers, typings, or sets if you are unsure of the matchup. Reply ONLY with the requested JSON. ' +
   "The 'why' field is your reasoning for the pick in 25 words or less. " +
   "The 'chat' field is a short message to the opponent: '' almost always, 'glhf' on turn 1, brief banter only on huge plays.";
 
